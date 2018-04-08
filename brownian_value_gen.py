@@ -3,6 +3,7 @@ import numpy as np
 from midiutil import MIDIFile
 import midi_scales
 import matplotlib.pyplot as plt
+import prob_map
 
 
 def brownian_value_gen(buffer_size=200, number_of_notes=1000):
@@ -79,7 +80,12 @@ def varied_pattern_gen(pattern_length=16, part_length=150, n_variations=2):
     vals = vals[0:part_length]
     return vals
 
-
+def prob_map_part_gen(note= 60, scale= "MAJOR", key="C", std=.2, number_of_notes=300):
+    _scale = prob_map.get_scale(key, scale)
+    note_array = [prob_map.choose_note(60, _scale, std) for x in range(number_of_notes)]
+    # print(note_array, len(note_array))
+    return note_array
+    
 
 if __name__ == '__main__':
     note_arr = []
@@ -87,9 +93,10 @@ if __name__ == '__main__':
         arr = brownian_value_gen(100, 320)
         note_arr.append(arr)
     # arr = pattern_gen(4,300)
-    arr = varied_pattern_gen(8,320,4)
-    note_arr.append(arr)
-    pitches = map_to_pitch(note_arr[4], 24, 96)
+    # arr = varied_pattern_gen(8,320,4)
+    # note_arr.append(arr)
+    # pitches = map_to_pitch(note_arr[4], 24, 96)
+    pitches = prob_map_part_gen(note = 53,number_of_notes=320, std =.1, key="F", scale="HARMONIC_MINOR")
     velocities = map_to_velocity(note_arr[1], 40, 100)
     durations = map_to_duration(note_arr[2])
     spacings = map_to_spacing(note_arr[3])
@@ -120,7 +127,7 @@ if __name__ == '__main__':
     
 
     
-    with open("new_varied_pttrn_8_4-6-2018.mid", "wb") as output_file:
+    with open("prob_map_3-4-8-2018.mid", "wb") as output_file:
         MyMIDI.writeFile(output_file)
 
 
