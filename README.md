@@ -1,6 +1,6 @@
 
 
-# ![logo](https://github.com/dougolson/Algorithmic-Music/logo_small.png) Algorithmic Music
+# ![logo](https://github.com/dougolson/Algorithmic-Music/blob/master/logo_small.png?raw=true) Algorithmic Music
 
 This is my attempt at generative or algorithmic music. Early efforts just used random number generators and I found the results to be uninteresting. Modeling brownian motion by accumulating random numbers into a buffer and mapping the result to pitch, duration, spacing and velocity gave more interesting results. The musical attributes wander rather than skip around. Of course there are many ways to generate sequences that can be mapped to musical parameters, and there are many ways to perform the mapping. 
 
