@@ -11,4 +11,6 @@ I use the [midiutil](https://github.com/MarkCWirt/MIDIUtil) library by Mark C Wi
 
 [Gustavo Diaz Jerez](http://www.gustavodiazjerez.com/?page_id=54&lang=en) has written a lot about the subject of algorithmic music, number sequences, mappings etc.
 
+I have a few files available on [soundcloud](https://soundcloud.com/mrcolson) if you'd like to hear what this sounds like.
+
 Thanks to Nuno Jesus for the cool logo!
