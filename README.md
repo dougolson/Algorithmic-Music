@@ -1,6 +1,6 @@
 
 
-# ![logo](https://github.com/dougolson/Algorithmic-Music/blob/master/logo_small.png?raw=true) Algorithmic Music
+# ![logo](https://github.com/dougolson/Algorithmic-Music/blob/master/Logo/Logotype_algoritmo_horizontal_sm.png?raw=true)
 
 This is my attempt at generative or algorithmic music. Early efforts just used random number generators and I found the results to be uninteresting. Modeling brownian motion by accumulating random numbers into a buffer and mapping the result to pitch, duration, spacing and velocity gave more interesting results. The musical attributes wander rather than skip around. Of course there are many ways to generate sequences that can be mapped to musical parameters, and there are many ways to perform the mapping. 
 
@@ -14,3 +14,4 @@ I use the [midiutil](https://github.com/MarkCWirt/MIDIUtil) library by Mark C Wi
 I have a few files available on [soundcloud](https://soundcloud.com/mrcolson) if you'd like to hear what this sounds like.
 
 Thanks to Nuno Jesus for the cool logo!
+
